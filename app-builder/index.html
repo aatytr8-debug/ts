@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>App Builder</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="app-title">App Builder</h1>
+      <div class="actions">
+        <button id="btn-save" title="Save to browser">Save</button>
+        <button id="btn-load" title="Load from browser">Load</button>
+        <button id="btn-export" title="Export to file">Export</button>
+        <button id="btn-import" title="Import from file">Import</button>
+        <input id="file-import" type="file" accept="application/json" hidden />
+      </div>
+    </header>
+
+    <main class="editor">
+      <aside class="palette" aria-label="Component palette">
+        <h2>Components</h2>
+        <div class="palette-list">
+          <div class="palette-item" draggable="true" data-component="text">Text</div>
+          <div class="palette-item" draggable="true" data-component="button">Button</div>
+          <div class="palette-item" draggable="true" data-component="image">Image</div>
+          <div class="palette-item" draggable="true" data-component="container">Container</div>
+        </div>
+      </aside>
+
+      <section class="canvas-container">
+        <div id="canvas" class="canvas" tabindex="0" aria-label="Design canvas"></div>
+      </section>
+
+      <aside class="properties" aria-label="Properties panel">
+        <h2>Properties</h2>
+        <form id="property-form" class="property-form">
+          <div class="empty-props">Select an element to edit its properties</div>
+        </form>
+      </aside>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+  </html>
+
